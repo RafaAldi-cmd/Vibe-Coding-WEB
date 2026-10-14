@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HabitTracker - Pencatat Kebiasaan Harian</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>🔥 HabitTracker</h1>
+      <p class="subtitle">Bangun konsistensi dan jaga kebiasaan positif setiap hari</p>
+    </header>
+
+    <section class="add-habit-section">
+      <form id="habitForm" class="habit-form">
+        <input 
+          type="text" 
+          id="habitInput" 
+          placeholder="Tulis kebiasaan baru (misal: Olahraga 20 menit)..." 
+          required 
+          autocomplete="off"
+        >
+        <button type="submit" class="btn btn-primary">Tambah</button>
+      </form>
+    </section>
+
+    <section class="stats-overview">
+      <div class="stat-card">
+        <span class="stat-value" id="totalHabitsCount">0</span>
+        <span class="stat-label">Total Kebiasaan</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="completedTodayCount">0</span>
+        <span class="stat-label">Selesai Hari Ini</span>
+      </div>
+    </section>
+
+    <main class="habits-list-section">
+      <h2>Daftar Kebiasaan Saya</h2>
+      <div id="habitsList" class="habits-list">
+        <!-- Item kebiasaan akan dirender oleh script.js -->
+      </div>
+      <div id="emptyState" class="empty-state">
+        <p>Belum ada kebiasaan yang dicatat. Mulai tambahkan kebiasaan pertama Anda di atas!</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
